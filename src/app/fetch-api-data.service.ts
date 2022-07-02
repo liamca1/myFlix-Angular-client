@@ -139,7 +139,7 @@ export class FetchApiDataService {
   getFavouriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
-    return this.http.get(apiUrl + `users/${username}/movies`, {
+    return this.http.get(apiUrl + `users/${username}`, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,
       })
@@ -158,6 +158,7 @@ export class FetchApiDataService {
   addFavouriteMovie(movieID: string): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
+    console.log('MovieID:' + movieID)
     return this.http.post(apiUrl + `users/${username}/movies/${movieID}`, null, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,

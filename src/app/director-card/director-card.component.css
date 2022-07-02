@@ -1,0 +1,32 @@
+.director-card {
+  background-color: #66ffa1;
+  margin-top: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.director-card-title {
+  color: #003D66;
+}
+
+.director-card-img {
+  margin-right: 20px;
+}
+
+.director-card-content {
+  color: #003D66;
+}
+
+::ng-deep .director-custom > mat-dialog-container {
+  background-color: #66ffa1;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.director-close-button {
+  color: white;
+  background-color: #f6a2a2;
+}
+/*# sourceMappingURL=director-card.component.css.map */

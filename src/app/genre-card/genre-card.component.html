@@ -1,0 +1,16 @@
+<div class="genre-card-container">
+  <mat-card class="genre-card">
+    <mat-card-title class="genre-card-title">{{ data.Name }}</mat-card-title>
+    <br />
+    <mat-card-content class="genre-card-description">{{ data.Description }}</mat-card-content>
+    <mat-card-actions class="genre-actions">
+      <button
+        class="genre-close-button"
+        mat-stroked-button
+        aria-lable="Close genre card"
+        mat-dialog-close
+        color="primary"
+        >X</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

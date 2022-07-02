@@ -1,0 +1,35 @@
+$backgroundColor: #E9F6FF;
+$cardColor: #66ffa1;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+
+.director-card {
+    background-color: $cardColor;
+    margin-top: 0px;
+    box-shadow: none;
+}
+
+.director-card-title {
+    color: $textColor;
+}
+
+.director-card-img {
+  margin-right: 20px;
+}
+
+.director-card-content {
+    color: $textColor;
+}
+
+::ng-deep .director-custom > mat-dialog-container {
+    background-color: $cardColor;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.director-close-button {
+  color: white;
+  background-color: #f6a2a2;
+}

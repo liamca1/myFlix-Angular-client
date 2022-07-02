@@ -33,7 +33,7 @@ loginUser(): void {
      localStorage.setItem('user', result.user.Username);
      // redirect to movies main page
      this.router.navigate(['movies']);
-     this.snackBar.open(result, 'OK', {
+     this.snackBar.open('You are now logged in', 'OK', {
         duration: 2000
      });
     }, (result) => {

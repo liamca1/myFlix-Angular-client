@@ -1,0 +1,77 @@
+<div class="user-profile-page">
+  <!-- User Profile -->
+  <div class="user-top">
+    <div class="avatar"></div>
+    <p class="username"><b>Username: </b> {{user.Username}}</p>
+    
+    <button
+      class="edit-button"
+      mat-raised-button
+      color="primary"
+      (click)="openEditDialog(
+        user.Username,
+        user.Email,
+        user.Birth,
+        user.Password
+      )"
+      >Edit Profile
+    </button>
+
+    <button
+    class="delete-button"
+    mat-raised-button
+    color="warn"
+    (click)="openDeleteDialog(
+      user.Username,
+      user.Email
+    )"
+    >Delete Profile
+  </button>
+
+
+    <!-- Display Favorite Movies -->
+    <div class="favourite-movies-header">
+      <h2 class="favourite-movies">Favourite Movies</h2>
+    </div>
+
+    <div class="favourite-movies-container">
+      <mat-card *ngFor="let movie of favouriteMovies;" class="favourite-movies">
+        <mat-card-title class="favourite-movies-title">
+          {{movie.Title}}
+        </mat-card-title>
+        <img src={{movie.ImagePath}} alt= {{movie.Title}} />
+        <!-- <button class="synopsis-button" mat-raised-button color="primary" (click)="openSynopsis(movie.Title, movie.ImagePath, movie.Description)">Synopsis</button> -->
+      </mat-card>
+    </div>
+
+
+  </div>
+</div>
+
+
+<!-- <mat-card class="user-profile-card">
+  <mat-card-header class="user-profile-card-header">
+    <mat-card-title>Profile Information</mat-card-title>
+  </mat-card-header>
+
+// View Profile Information -->
+  <!-- <mat-card-content class="user-profile-card-content">
+    <p><b>Username:</b> {{user.Username}}</p>
+    <p><b>Email:</b> {{user.Email}}</p>
+    <p><b>Birthday:</b> {{user.Birthday | date }}</p>
+  </mat-card-content> -->
+
+  <!-- Edit Profile Information & Delete Profile -->
+  <!-- <mat-card-actions class="user-profile-actions">
+
+    <button mat-raised-button (click)="openEditProfileDialog()" color="primary">
+      <mat-icon>edit</mat-icon>
+      Edit Profile
+    </button>
+    <button mat-raised-button (click)="deleteProfile()" color="warn">
+      <mat-icon>delete_forever</mat-icon>
+      Delete Profile
+    </button>
+
+  </mat-card-actions> -->
+<!-- </mat-card> -->

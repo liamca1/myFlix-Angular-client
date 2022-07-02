@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,KAAK;EAEb,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,IAAI;EACT,SAAS,EAAE,IAAI;EAEf,eAAe,EAAE,aAAa;EAC9B,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "movie-card.component.scss"
+    ],
+    "names": [],
+    "file": "movie-card.component.css"
+}

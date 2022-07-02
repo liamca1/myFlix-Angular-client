@@ -1,0 +1,61 @@
+$backgroundColor: #eeed90;
+$cardColor: #66C3FF;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+$buttonColor: #001F33;
+
+.nav-bar-wrapper {
+  margin: auto;
+  padding: 20px;
+  background: $backgroundColor;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar-logo {
+  font-family: "GT-Alpina-Italic-VAR-Trial";
+  margin: 0 3rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex: 1 0 0%;
+  justify-content: space-between;
+}
+
+.nav-bar-item {
+  margin: 0 3rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex: 1 0 0%;
+  justify-content: space-between;
+}
+
+
+
+// .nav-bar {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: baseline;
+//   align-items: center;
+//   position: relative;
+//   margin: auto;
+//   color: $backgroundColor;
+// }
+
+// .mat-button {
+//   border: 1px solid $backgroundColor;
+//   border-radius: 0px;
+// }
+
+// justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     box-shadow: 10px 5px 5px $boxShadowColor;
+//     background-color: $cardColor;
+//     max-width: 280px;
+//     width: 280px;
+//     margin: 15px;
+//     padding: 20px 3px;

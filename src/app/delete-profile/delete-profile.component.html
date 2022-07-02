@@ -1,0 +1,24 @@
+<div class="delete-card-container">
+  <mat-card class="delete-card">
+    <mat-card-title class="delete-card-title">{{ user.Username }}</mat-card-title>
+    <br />
+    <mat-card-content class="delete-card-description">Email: {{ user.Email }}</mat-card-content>
+    <mat-card-actions class="delete-actions">
+      <button
+            mat-raised-button
+            (click)="deleteUser()"
+            class="delete-profile-button"
+            color="warn"
+        >
+            Delete Profile
+        </button>
+      <button
+        class="delete-close-button"
+        mat-stroked-button
+        aria-lable="Close delete card"
+        mat-dialog-close
+        color="primary"
+        >X</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

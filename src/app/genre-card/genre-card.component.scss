@@ -1,0 +1,35 @@
+$backgroundColor: #E9F6FF;
+$cardColor: #c766ff;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+
+.genre-card {
+    background-color: $cardColor;
+    margin-top: 0px;
+    box-shadow: none;
+}
+
+.genre-card-title {
+    color: $textColor;
+}
+
+.genre-card-img {
+  margin-right: 20px;
+}
+
+.genre-card-content {
+    color: $textColor;
+}
+
+::ng-deep .genre-custom > mat-dialog-container {
+    background-color: $cardColor;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.genre-close-button {
+  color: white;
+  background-color: #f6a2a2;
+}

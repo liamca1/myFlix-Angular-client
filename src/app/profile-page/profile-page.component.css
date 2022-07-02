@@ -1,0 +1,13 @@
+.user-profile-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-top {
+  margin: 0 3rem 0 0;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=profile-page.component.css.map */

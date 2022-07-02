@@ -1,0 +1,32 @@
+.synopsis-card {
+  background-color: #ffa866;
+  margin-top: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.synopsis-card-title {
+  color: #003D66;
+}
+
+.synopsis-card-img {
+  margin-right: 20px;
+}
+
+.synopsis-card-content {
+  color: #003D66;
+}
+
+::ng-deep .synopsis-custom > mat-dialog-container {
+  background-color: #ffa866;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.synopsis-close-button {
+  color: white;
+  background-color: #f6a2a2;
+}
+/*# sourceMappingURL=synopsis-card.component.css.map */

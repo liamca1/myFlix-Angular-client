@@ -1,0 +1,35 @@
+$backgroundColor: #E9F6FF;
+$cardColor: #ffa866;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+
+.synopsis-card {
+    background-color: $cardColor;
+    margin-top: 0px;
+    box-shadow: none;
+}
+
+.synopsis-card-title {
+    color: $textColor;
+}
+
+.synopsis-card-img {
+  margin-right: 20px;
+}
+
+.synopsis-card-content {
+    color: $textColor;
+}
+
+::ng-deep .synopsis-custom > mat-dialog-container {
+    background-color: $cardColor;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.synopsis-close-button {
+  color: white;
+  background-color: #f6a2a2;
+}
