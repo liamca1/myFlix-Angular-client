@@ -1,1 +1,45 @@
-/* No CSS *//*# sourceMappingURL=welcome-page.component.css.map */
+.background {
+  background-color: #eeed90;
+  height: 100vh;
+  width: 100vw;
+}
+
+.welcome-page {
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 60px;
+  padding: 20px;
+  background-color: #eeed90;
+}
+
+.nav-bar-wrapper {
+  margin: auto;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-bar-logo {
+  font-family: "GT-Alpina-Italic-VAR-Trial";
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+}
+/*# sourceMappingURL=welcome-page.component.css.map */

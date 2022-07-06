@@ -1,9 +1,14 @@
-/* User Profile */
-
+$backgroundColor: #eeed90;
+$cardColor: #66C3FF;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+$buttonColor: #001F33;
 
 /* Auto layout */
 .user-top {
   width: 100%;
+  height: 100vh;
+  background-color: $backgroundColor;
 
   display: flex;
   flex-direction: column;

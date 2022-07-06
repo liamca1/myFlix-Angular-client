@@ -136,18 +136,19 @@ export class FetchApiDataService {
    * gets data on users favourite movies
    * @returns JSON list holding user's favourite movies
    */
-  getFavouriteMovies(): Observable<any> {
+   getFavouriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
-    return this.http.get(apiUrl + `users/${username}`, {
-      headers: new HttpHeaders({
-        Authorization: 'Bearer ' + token,
+    return this.http
+      .get(apiUrl + `users/${username}/movies`, {
+        headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token,
+        })
       })
-    })
-    .pipe(
-      map(this.extractResponseData),
-      catchError(this.handleError)
-    );
+      .pipe(
+        map(this.extractResponseData),
+        catchError(this.handleError)
+      );
   }
 
   /**
@@ -159,7 +160,7 @@ export class FetchApiDataService {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
     console.log('MovieID:' + movieID)
-    return this.http.post(apiUrl + `users/${username}/movies/${movieID}`, null, {
+    return this.http.put(apiUrl + `users/${username}/movies/${movieID}`, null, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,
       })

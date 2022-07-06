@@ -1,6 +1,19 @@
+$backgroundColor: #eeed90;
+$cardColor: #66C3FF;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+$buttonColor: #001F33;
+
+.background {
+  background-color: $backgroundColor;
+  height: auto;
+  width: 100vw;
+}
+
+
 .movie-card-wrapper {
   max-width: 100vw;
-  height: 768px;
+  height: auto;
 
   display: flex;
   gap: 16px;
@@ -9,4 +22,9 @@
   justify-content: space-between;
   margin: auto;
   padding: 20px;
+}
+
+.mat-card {
+  border: solid 1px #000;
+  background-color: #fff0;
 }

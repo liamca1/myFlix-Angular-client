@@ -1,0 +1,45 @@
+$backgroundColor: #eeed90;
+$cardColor: #66C3FF;
+$textColor: #003D66;
+$boxShadowColor: #006BB3;
+$buttonColor: #001F33;
+
+.background {
+  background-color: $backgroundColor;
+  height: 100vh;
+  width: 100vw;
+}
+
+.welcome-page {
+    max-width: 100vw;
+  
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  
+    justify-content: space-around;
+    margin: 60px;
+    padding: 20px;
+
+    background-color: $backgroundColor;
+  }
+
+.nav-bar-wrapper {
+  margin: auto;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav-bar-logo {
+  font-family: "GT-Alpina-Italic-VAR-Trial";
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px;
+}

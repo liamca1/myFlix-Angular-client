@@ -41,20 +41,13 @@ export class ProfilePageComponent implements OnInit {
       return this.user;
     })
   }
-
+  
   getFavouriteMovies(): void {
-    const token = localStorage.getItem('token');
-    console.log(token);
-    this.fetchApiData.getAllMovies().subscribe((resp: any) => {
-      this.movies = resp;
-      this.movies.forEach((movie: any) => {
-        if (this.user.favouriteMovies.includes(movie._id)) {
-          this.favouriteMovies.push(movie);
-        }
-      });
+    this.fetchApiData.getFavouriteMovies().subscribe((resp: any) => {
+      this.favouriteMovies = resp;
+      console.log(this.favouriteMovies);
+      return this.favouriteMovies;
     });
-    console.log(this.favouriteMovies);
-    this.ngOnInit;
   }
 
   openEditDialog(username: string, email: string, birth: string, password: string): void {

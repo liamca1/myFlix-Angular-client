@@ -1,57 +1,61 @@
-<div style="display: flex;" class="movie-card-wrapper">
-  <mat-card *ngFor="let movie of movies;" class="movie-card">
-      <mat-card-header>
-      <mat-card-title>{{movie.Title}}</mat-card-title>
-          <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
-      </mat-card-header>
-      <img style="max-width: 40vw;" src={{movie.ImagePath}} alt= {{movie.Title}} />
-      <mat-card-actions>
-          <button
-              class="director-button"
-              mat-button
-              color="primary"
-              (click)="openDirectorDialog(
-                movie.Director.Name,
-                movie.Director.Bio,
-                movie.Director.Birth
-              )"
-          >
-              Director
-          </button>
-          <button
-              class="genre-button"
-              mat-button
-              color="primary"
-              (click)="openGenreDialog(
-                movie.Genre.Name,
-                movie.Genre.Description
-              )"
-          >
-              Genre
-          </button>
-          <button
-              class="synopsis-button"
-              mat-button
-              color="primary"
-              (click)="openSynopsis(
-                movie.Title,
-                movie.ImagePath,
-                movie.Description
+<app-navbar></app-navbar>
+
+<div class="background">
+  <div style="display: flex;" class="movie-card-wrapper">
+    <mat-card *ngFor="let movie of movies;" class="movie-card">
+        <mat-card-header>
+        <mat-card-title>{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle>Directed by: {{movie.Director.Name}}</mat-card-subtitle>
+        </mat-card-header>
+        <img style="max-width: 40vw;" src={{movie.ImagePath}} alt= {{movie.Title}} />
+        <mat-card-actions>
+            <button
+                class="director-button"
+                mat-button
+                color="primary"
+                (click)="openDirectorDialog(
+                  movie.Director.Name,
+                  movie.Director.Bio,
+                  movie.Director.Birth
                 )"
-          >
-              Synopsis
-          </button>
-          <button
-            mat-icon-button color="warn"
-            (click)="addToUserFavourites(
-            movie._id,
-            movie.Title)">
-            <mat-icon>
-              favorite_border
-            </mat-icon>
-          </button>
-      </mat-card-actions>
-  </mat-card>
+            >
+                Director
+            </button>
+            <button
+                class="genre-button"
+                mat-button
+                color="primary"
+                (click)="openGenreDialog(
+                  movie.Genre.Name,
+                  movie.Genre.Description
+                )"
+            >
+                Genre
+            </button>
+            <button
+                class="synopsis-button"
+                mat-button
+                color="primary"
+                (click)="openSynopsis(
+                  movie.Title,
+                  movie.ImagePath,
+                  movie.Description
+                  )"
+            >
+                Synopsis
+            </button>
+            <button
+              mat-icon-button color="warn"
+              (click)="addToUserFavourites(
+              movie._id,
+              movie.Title)">
+              <mat-icon>
+                favorite_border
+              </mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
 
 <!-- 

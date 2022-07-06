@@ -1,9 +1,5 @@
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.main-background {
+  background-color: #eeed90;
+  height: auto;
 }
 /*# sourceMappingURL=app.component.css.map */
