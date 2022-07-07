@@ -34,6 +34,11 @@ export class ProfilePageComponent implements OnInit {
     this.getFavouriteMovies();
   }
 
+  /**
+   * Calls API endpoint to: get the user's data
+   * @function getUser
+   * @returns user's data in JSON format
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
@@ -42,6 +47,10 @@ export class ProfilePageComponent implements OnInit {
     })
   }
   
+  /**
+   * Calls API endpoint to: get a user's list of favourite movies
+   * @function getFavouriteMovies
+   */
   getFavouriteMovies(): void {
     this.fetchApiData.getFavouriteMovies().subscribe((resp: any) => {
       this.favouriteMovies = resp;
@@ -50,6 +59,13 @@ export class ProfilePageComponent implements OnInit {
     });
   }
 
+  /**
+   * opens the EditProfileComponent so that a user can edit their data
+   * @param username 
+   * @param email 
+   * @param birth 
+   * @param password 
+   */
   openEditDialog(username: string, email: string, birth: string, password: string): void {
     this.dialog.open(EditProfileComponent, {
       data: {
@@ -63,6 +79,11 @@ export class ProfilePageComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens DeleteProfileComponent so that a user can remove their profile/data from the database
+   * @param username 
+   * @param email 
+   */
   openDeleteDialog(username: string, email: string): void {
     this.dialog.open(DeleteProfileComponent, {
       data: {
@@ -73,7 +94,5 @@ export class ProfilePageComponent implements OnInit {
       panelClass: 'delete-custom'
     });
   }
-
-
 
 }

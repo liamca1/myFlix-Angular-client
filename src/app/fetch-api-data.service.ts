@@ -25,8 +25,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * @param userDetails 
-   * @returns a user object in JSON format
+   * Calls API endpoint to: register a new user
+   * @param userDetails {any}
+   * @returns a new user object in JSON format
    */
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
@@ -36,9 +37,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * 
-   * @param userDetails 
-   * @returns user data in JSON format
+   * Calls API endpoint to: log in a user
+   * @param userDetails {any}
+   * @returns user's data in JSON format
    */
   public userLogin(userDetails: any): Observable<any> {
     return this.http
@@ -48,8 +49,8 @@ export class FetchApiDataService {
   }
 
   /**
-   * gets data on all movies
-   * @returns JSON format array of all movies
+   * Calls API endpoint to: get data on all movies
+   * @returns array of all movies in JSON format
    */
   getAllMovies(): Observable<any> {
     return this.http.get(apiUrl + 'movies', { 
@@ -61,10 +62,11 @@ export class FetchApiDataService {
       catchError(this.handleError)
     );
   }
+
   /**
-   * gets data on single movie
-   * @param title 
-   * @returns JSON object holding movie data
+   * Calls API endpoint to: get data on single movie
+   * @param title {any}
+   * @returns a single movie in JSON format
    */
   getSingleMovie(title: any): Observable<any> {
     return this.http.get(apiUrl + `movies/${title}`, {
@@ -79,9 +81,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * gets data on director
-   * @param name 
-   * @returns JSON object holding director data
+   * Calls API endpoint to: get data about a specific director
+   * @param name {any}
+   * @returns a director's data in JSON format
    */
   getDirector(name: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -97,9 +99,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * gets data on genre
-   * @param name 
-   * @returns JSON object holding genre data
+   * Calls API endpoint to: get data about genre
+   * @param name {any}
+   * @returns a genre's data in JSON format
    */
   getGenre(name: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -115,8 +117,8 @@ export class FetchApiDataService {
   }
 
   /**
-   * Gets data on single user
-   * @returns JSON object holding data on requested user
+   * Calls API endpoint to: get data about a single user
+   * @returns user's data in JSON format
    */
   getUser(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -133,8 +135,8 @@ export class FetchApiDataService {
   }
 
   /**
-   * gets data on users favourite movies
-   * @returns JSON list holding user's favourite movies
+   * Calls API endpoint to: get data about a user's favourite movies
+   * @returns user's favourite movies in JSON format
    */
    getFavouriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -153,8 +155,8 @@ export class FetchApiDataService {
 
   /**
    * adds a movie to the user's favourite movies list
-   * @param movieID 
-   * @returns JSON object holding updated user data
+   * @param movieID {string}
+   * @returns user's updated list of favourite movies in JSON format
    */
   addFavouriteMovie(movieID: string): Observable<any> {
     const token = localStorage.getItem('token');
@@ -172,9 +174,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * delete a movie from the users favourite movie list
-   * @param movieID 
-   * @returns JSON object holding updated user data
+   * Calls API endpoint to: delete a movie from a user's list of favourite movies
+   * @param movieID {string}
+   * @returns user's updated list of favourite movies in JSON format
    */
   removeFavouriteMovie(movieID: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -191,9 +193,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * allows user to update their user data
-   * @param updateDetails 
-   * @returns JSON object holding updated user data
+   * Calls API endpoint to: edit a user's data
+   * @param updateDetails {any}
+   * @returns user's updated data in JSON format
    */
   editUser(updateDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -210,8 +212,8 @@ export class FetchApiDataService {
   }
 
   /**
-   * allows user to delete account / deregister
-   * @returns A message that the user profile was successfully deleted
+   * Calls API endpoint to: delete the current user;s account from the database
+   * @returns A message that the user profile was deleted
    */
   deleteUser(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -227,16 +229,13 @@ export class FetchApiDataService {
     );
   }
 
-  /**
-   * extracts response data from HTTP response
-   * @param res 
-   * @returns response or empty object
-   */
+  
   private extractResponseData(res: any): any {
     const body = res;
     return body || {};
   }
 
+  // Function that handles errors
   private handleError(error: HttpErrorResponse): any {
       if (error.error instanceof ErrorEvent) {
         console.error('Some error occurred:', error.error.message);

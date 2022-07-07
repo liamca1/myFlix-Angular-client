@@ -22,11 +22,13 @@ export class UserRegistrationFormComponent implements OnInit {
   }
 
   /**
-   * sending form inputs for user registration to backend via fetchApiData Service
+   * Registers a user to the database
+   * Displays a message that the user has been registered
+   * @function userRegistration
    */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
-      // TBD: Logic for successfull registration!
+      // Logic for successfull registration
       this.dialogRef.close(); // Close the modal on success
       console.log(result);
       this.snackBar.open('Your account has been created', 'OK', {

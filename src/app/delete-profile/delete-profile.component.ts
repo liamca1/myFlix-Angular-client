@@ -37,6 +37,9 @@ export class DeleteProfileComponent implements OnInit {
     })
   }
 
+  /**
+   * Calls the API endpoint to remove (delete) the logged in user's profile and data from the database
+   */
   deleteUser(): void {
     if (confirm('Are you sure you want to delete your account?')) {
       this.router.navigate(['welcome']).then(() => {

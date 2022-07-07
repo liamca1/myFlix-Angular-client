@@ -32,6 +32,11 @@ export class EditProfileComponent implements OnInit {
     this.getUser();
   }
 
+  /**
+   * Gets the user's data
+   * @function getUser
+   * @returns the data of the logged in user
+   */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
@@ -40,6 +45,13 @@ export class EditProfileComponent implements OnInit {
     })
   }
 
+  /**
+   * Updates the user's data in the database
+   * Displays a message that the user's profile was successfully updated
+   * Reloads the page
+   * @function editUserProfile
+   * @returns the updated data of the logged in user
+   */
   editUserProfile(): void {
     this.fetchApiData.editUser(this.userData).subscribe((resp) => {
       this.dialogRef.close();
