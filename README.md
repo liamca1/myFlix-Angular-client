@@ -8,6 +8,8 @@ Users can register an account, log in, log out, update and delete account. Users
 
 <img width="1424" alt="Screen Shot 2022-07-10 at 3 42 56 PM" src="https://user-images.githubusercontent.com/88624211/178239969-0077d854-08ab-4e0e-bcb5-f014002c7e70.png">
 
+<img width="1425" alt="Screen Shot 2022-07-11 at 12 07 10 PM" src="https://user-images.githubusercontent.com/88624211/178241149-c242a3c7-2917-41e7-af47-5913d8119f80.png">
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
