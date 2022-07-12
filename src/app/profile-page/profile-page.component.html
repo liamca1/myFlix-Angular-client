@@ -41,12 +41,10 @@
         <mat-card-title class="favourite-movies-title">
           {{movie.Title}}
         </mat-card-title>
-        <img src={{movie.ImagePath}} alt= {{movie.Title}} />
-        <!-- <button class="synopsis-button" mat-raised-button color="primary" (click)="openSynopsis(movie.Title, movie.ImagePath, movie.Description)">Synopsis</button> -->
+        <img class="fav-img" src={{movie.ImagePath}} alt= {{movie.Title}} />
+        <mat-card-subtitle>Directed by {{movie.Director.Name}}</mat-card-subtitle>
       </mat-card>
     </div>
-
-
   </div>
 </div>
 

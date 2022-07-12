@@ -26,3 +26,18 @@ $buttonColor: #001F33;
   background: #000000;
   margin-top: 16px;
 }
+
+.favourite-movies-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.favourite-movies {
+  margin: 8px;
+}
+
+.fav-img {
+  width: 20vw;
+  height: auto;
+}

@@ -21,6 +21,7 @@ export class ProfilePageComponent implements OnInit {
   username: any = localStorage.getItem('user');
   movies: any[] = [];
   favouriteMovies: any[] = [];
+  favIds: any[] = [];
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -41,8 +42,9 @@ export class ProfilePageComponent implements OnInit {
    */
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
+      this.user && this.getFavouriteMovies();
       this.user = resp;
-      console.log(this.user);
+      this.favIds = this.user.FavouriteMovies ? this.user.FavouriteMovies.map((f: any) => f['_id']) : [];
       return this.user;
     })
   }
@@ -52,10 +54,13 @@ export class ProfilePageComponent implements OnInit {
    * @function getFavouriteMovies
    */
   getFavouriteMovies(): void {
-    this.fetchApiData.getFavouriteMovies().subscribe((resp: any) => {
-      this.favouriteMovies = resp;
-      console.log(this.favouriteMovies);
-      return this.favouriteMovies;
+    this.fetchApiData.getAllMovies().subscribe((resp: any) => {
+      this.movies = resp;
+      this.movies.forEach((movie: any) => {
+        if (this.favIds.includes(movie._id)) {
+          this.favouriteMovies.push(movie);
+        }
+      });
     });
   }
 
